@@ -19,9 +19,9 @@ const e=document.querySelector(".container"),t=document.querySelector(".footer__
             <p class="modal__text">${t.dates.timezone}</p>
             <h2 class="modal__title">PRICES</h2>
             <p class="modal__text">Standart ${t.priceRanges[0].min}-${t.priceRanges[0].max} ${t.priceRanges[0].currency}</p>
-            <button class="modal__btn">BUY TICKETS</button>
+            <a href="${t.url}" class="modal__btn">BUY TICKETS</a>
           </div>
         </div>
-        <a class="modal__author" src="#">MORE FROM THIS AUTHOR</a>
-        `,document.querySelector(".modal__close").addEventListener("click",d),c.style.display="flex",o.style.display="block",document.body.style.overflowY="hidden"}}),c.addEventListener("click",e=>{e.currentTarget==e.target&&d()}),n.addEventListener("click",e=>{"footer__numbers-number"==e.target.className&&"..."!=e.target.textContent&&r(e.target.textContent,m,"")}),i.search.addEventListener("input",_.debounce(e=>{m=e.target.value,r("1",e.target.value,i.country.value)},500));const u=document.querySelector(".loader");document.body.style.overflow="hidden",u.addEventListener("click",()=>{u.classList.add("active"),setTimeout(()=>{u.style.display="none",document.body.style.overflow="scroll"},3e3)});
-//# sourceMappingURL=index.1bff0320.js.map
+        <a class="modal__author" href="${t.url}">MORE FROM THIS AUTHOR</a>
+        `,document.querySelector(".modal__close").addEventListener("click",d),c.style.display="flex",o.style.display="block",document.body.style.overflowY="hidden"}}),c.addEventListener("click",e=>{e.currentTarget==e.target&&d()}),n.addEventListener("click",e=>{"footer__numbers-number"==e.target.className&&"..."!=e.target.textContent&&r(e.target.textContent,m,"")}),i.search.addEventListener("input",_.debounce(e=>{m=e.target.value,r("1",e.target.value,i.country.value)},500));const u=document.querySelector(".loader");document.body.style.overflow="hidden",u.addEventListener("click",()=>{u.classList.add("active"),setTimeout(()=>{u.style.display="none",document.body.style.overflow="scroll",u.remove()},3e3)});
+//# sourceMappingURL=index.8ebfcd15.js.map
