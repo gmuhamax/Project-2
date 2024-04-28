@@ -6,7 +6,7 @@
                     <span class="main__card-place">${a(t.dates.timezone,"America/New_York")}</span>
                 </div>
                 `})}catch(t){e.innerHTML="<h2 class='header__title'>NOT FOUND</h2>"}}let l=document.querySelector(".container"),c=document.querySelector(".modal"),n=document.querySelector(".wrapper__modal"),o=document.querySelector(".footer__numbers"),i=document.querySelector(".header__wrapper"),d=document.querySelector("span.header__input"),m=document.querySelector(".header__input-wrapper"),u=()=>{n.style.display="none",c.style.display="none",document.body.style.overflowY="scroll"},p="";r("1",p,""),l.addEventListener("click",async e=>{if("main__card-title"==e.target.className){let t=await fetch(`https://app.ticketmaster.com/discovery/v2/events/${e.target.dataset.id}?apikey=Wrom1SFhmivsqr0qBMcV6NJoa0MTYBhn`);(t=await t.json()).priceRanges=t.priceRanges?t.priceRanges:[{min:0,max:0,currency:"$"}],c.innerHTML=`
-        <img class="modal__close" src="/close.6a3fa3b0.png">
+        <img class="modal__close" src="Project-2/close.6a3fa3b0.png">
         <img src="${t.images[0].url}" alt="" class="modal__icon">
         <div class="modal__content">
           <img src="${t.images[0].url}" class="modal__preview"></img>
@@ -24,4 +24,4 @@
         </div>
         <a class="modal__author" href="${t.url}">MORE FROM THIS AUTHOR</a>
         `,document.querySelector(".modal__close").addEventListener("click",u),n.style.display="flex",c.style.display="block",document.body.style.overflowY="hidden"}}),n.addEventListener("click",e=>{e.currentTarget==e.target&&u()}),o.addEventListener("click",e=>{"footer__numbers-number"==e.target.className&&"..."!=e.target.textContent&&r(e.target.textContent,p,"")}),i.search.addEventListener("input",_.debounce(e=>{p=e.target.value,r("1",e.target.value,d.dataset.value)},500)),d.addEventListener("input",e=>{r("1",p,d.dataset.value)}),d.addEventListener("click",()=>{d.classList.toggle("active"),m.classList.toggle("active")}),m.addEventListener("click",e=>{"header__input-item"==e.target.className&&(d.innerHTML=e.target.innerHTML,d.dataset.value=e.target.dataset.value,d.classList.toggle("active"),m.classList.toggle("active"),r("1",p,d.dataset.value))});let v=document.querySelector(".loader");document.body.style.overflow="hidden",v.addEventListener("click",()=>{v.classList.add("active"),setTimeout(()=>{v.style.display="none",document.body.style.overflow="scroll",v.remove()},3e3)})}();
-//# sourceMappingURL=index.988f99e7.js.map
+//# sourceMappingURL=index.84503310.js.map
