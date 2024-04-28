@@ -6,7 +6,7 @@
                     <span class="main__card-place">${a(t.dates.timezone,"America/New_York")}</span>
                 </div>
                 `})}catch(t){e.innerHTML="<h2 class='header__title'>NOT FOUND</h2>"}}let l=document.querySelector(".container"),c=document.querySelector(".modal"),n=document.querySelector(".wrapper__modal"),o=document.querySelector(".footer__numbers"),i=document.querySelector(".header__wrapper"),d=document.querySelector("span.header__input"),m=document.querySelector(".header__input-wrapper"),u=()=>{n.style.display="none",c.style.display="none",document.body.style.overflowY="scroll"},p="";r("1",p,""),l.addEventListener("click",async e=>{if("main__card-title"==e.target.className){let t=await fetch(`https://app.ticketmaster.com/discovery/v2/events/${e.target.dataset.id}?apikey=Wrom1SFhmivsqr0qBMcV6NJoa0MTYBhn`);(t=await t.json()).priceRanges=t.priceRanges?t.priceRanges:[{min:0,max:0,currency:"$"}],c.innerHTML=`
-        <img class="modal__close" src="/close.d7789fe2.png">
+        <img class="modal__close" src="/close.6a3fa3b0.png">
         <img src="${t.images[0].url}" alt="" class="modal__icon">
         <div class="modal__content">
           <img src="${t.images[0].url}" class="modal__preview"></img>
